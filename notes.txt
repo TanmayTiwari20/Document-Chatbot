@@ -1,0 +1,10 @@
+Load the document using TextLoader and then load()
+create a text_splitter object using RecursiveCharacterTextSplitter
+use that object to split the document into chunks
+create a vectore to store all the chunks and their vector format
+Use Chroma.from_documents and pass the embedding object and the chunks to it
+embedding = OpenAIEmbeddings()
+Create a retirever which will fetch the info from the vector store
+Create a chain object using the RetireverQA.from_chain_type(llm,retirever)
+
+ConversationalRetrievalChain stores the chat history as well.
